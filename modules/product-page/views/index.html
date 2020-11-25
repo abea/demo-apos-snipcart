@@ -1,0 +1,46 @@
+{% import '@apostrophecms/pager:macros.html' as pager with context %}
+{% extends "layout.html" %}
+
+{% block main %}
+  <section>
+    <header>
+      <h1>{{ data.page.title }}</h1>
+    </header>
+    <div class="fg-products">
+      {% for product in data.pieces %}
+        <div class="fg-products__item">
+          {% set image = apos.image.first(product.photo) %}
+          {% set imgUrl = apos.attachment.url(image, { size: 'one-third' }) %}
+          <img
+            class="fg-products__thumbnail"
+            src="{{ imgUrl }}" alt="{{ product.photo.items[0].alt or '' }}"
+          />
+          <h2>
+            <a href="{{ product._url }}">{{ product.title }}</a>
+          </h2>
+          <p>
+            Price: ${{ product.price }}
+          </p>
+          {% if product.description %}
+            <p>
+              {{ product.description }}
+            </p>
+          {% endif %}
+          <button
+            class="snipcart-add-item"
+            data-item-id="{{ product.sku }}"
+            data-item-name="{{ product.title }}"
+            data-item-price="{{ product.price }}"
+            data-item-url="{{ product._url }}"
+            data-item-description="{{ product.description or '' }}"
+            data-item-image="{{ imgUrl }}"
+          >Add to Cart</button>
+        </div>
+      {% endfor %}
+    </div>
+    {{ pager.render({
+      page: data.currentPage,
+      total: data.totalPages
+    }, data.url) }}
+  </section>
+{% endblock %}

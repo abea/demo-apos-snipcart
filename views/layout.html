@@ -9,6 +9,11 @@
   {% endif %}
 {% endblock %}
 
+{% block bodyClass %}
+  {{ super() }}
+  {% if data.user %}logged-in{% endif %}
+{% endblock %}
+
 {% block extraHead %}
   {#
     This block outputs its contents in the HTML document's <head>.
@@ -19,11 +24,16 @@
 {% block beforeMain %}
 <div class="bp-wrapper">
   <header class="bp-header">
-    <img class="bp-header__logo" src="/images/logo.png" alt="ApostropheCMS logo">
+    <a href="/">
+      <img class="bp-header__logo" src="/images/fake-goods.png" alt="Fake Goods logo">
+    </a>
     <nav class="bp-nav"></nav>
-    {% if not data.user %}
-      <a class="bp-button bp-header__login" href="/login">Login</a>
-    {% endif %}
+    <div>
+      <button class="snipcart-checkout">
+        Check out (<span class="snipcart-total-price"></span>)
+      </button>
+
+    </div>
   </header>
   <main class="bp-main">
 {% endblock %}
@@ -39,14 +49,15 @@
 {% block afterMain %}
   </main>
   <footer class="bp-footer">
-    <h3>Essential Links</h3>
-    <ul class="bp-footer__links">
-      <li><a href="https://apostrophecms.com/" target="_blank">About ApostropheCMS</a></li>
-      <li><a href="https://chat.apostrophecms.com/" target="_blank">Discord</a></li>
-      <li><a href="https://github.com/apostrophecms/apostrophe/tree/3.0" target="_blank">Github (3.0 branch)</a></li>
-      <li><a href="https://twitter.com/apostrophecms" target="_blank">Twitter</a></li>
-      <li><a href="https://forum.apostrophecms.org" target="_blank">Forum</a></li>
-    </ul>
+    <p>© Nobody, this is fake</p>
   </footer>
 </div>{# Close .bp-wrapper #}
+{% endblock %}
+
+{% block extraBody %}
+  <link rel="preconnect" href="https://app.snipcart.com">
+  <link rel="preconnect" href="https://cdn.snipcart.com">
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.25/default/snipcart.css" />
+  <script async src="https://cdn.snipcart.com/themes/v3.0.25/default/snipcart.js"></script>
+  <div hidden id="snipcart" data-api-key="Y2RiZTY3M2YtNDc0OC00Y2FhLWI3YmUtZWYxYzk4YTA2NDg2NjM3NDE5MjMxOTQwNTQ3MjI1"></div>
 {% endblock %}

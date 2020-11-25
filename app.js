@@ -1,7 +1,7 @@
 const path = require('path');
 
 require('apostrophe')({
-  shortName: 'a3-boilerplate',
+  shortName: 'fake-goods',
 
   modules: {
 
@@ -57,7 +57,9 @@ require('apostrophe')({
 
     // A home for our own project-specific javascript and SASS assets
     asset: {},
-    'default-page': {}
+    'default-page': {},
+    product: {},
+    'product-page': {}
 
   }
 });
