@@ -4,18 +4,7 @@ require('apostrophe')({
   shortName: 'fake-goods',
 
   modules: {
-
     // Apostrophe module configuration
-
-    // Note: most configuration occurs in the respective
-    // modules' directories. See lib/@apostrophecms/assets/index.js for an example.
-
-    // However any modules that are not present by default in Apostrophe must at
-    // least have a minimal configuration here to turn them on: `moduleName: {}`
-
-    // If a template is not found somewhere else, serve it from the top-level
-    // `views/` folder of the project
-
     '@apostrophecms/template': {
       options: {
         viewsFolderFallback: path.join(__dirname, 'views')
@@ -45,7 +34,6 @@ require('apostrophe')({
         refreshOnRestart: true
       }
     },
-
     '@apostrophecms/express': {
       options: {
         session: {
@@ -57,9 +45,12 @@ require('apostrophe')({
 
     // A home for our own project-specific javascript and SASS assets
     asset: {},
-    'default-page': {},
-    product: {},
-    'product-page': {}
 
+    // ADD PRODUCT MODULES BELOW ⤵️
+    product: {},
+    'product-page': {},
+
+    // A custom page type, just for the fun of it.
+    'default-page': {}
   }
 });
