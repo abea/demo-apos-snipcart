@@ -14,13 +14,14 @@ module.exports = {
       }
     ],
     park: [
-      {
-        type: 'product-page',
-        title: 'Shop',
-        slug: '/shop',
-        published: true,
-        parkedId: 'shopPage'
-      }
+      // Uncomment below to add a parked shop page. ⤵️
+      // {
+      //   type: 'product-page',
+      //   title: 'Shop',
+      //   slug: '/shop',
+      //   published: true,
+      //   parkedId: 'shopPage'
+      // }
     ]
   }
 };
