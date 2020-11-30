@@ -28,15 +28,7 @@
               {{ product.description }}
             </p>
           {% endif %}
-          <button
-            class="snipcart-add-item fg-button"
-            data-item-id="{{ product.sku }}"
-            data-item-name="{{ product.title }}"
-            data-item-price="{{ product.price }}"
-            data-item-url="{{ product._url }}"
-            data-item-description="{{ product.description or '' }}"
-            data-item-image="{{ imgUrl }}"
-          >Add to Cart</button>
+          <!-- Swap in the Snipcart button here. -->
         </div>
       {% endfor %}
     </div>
