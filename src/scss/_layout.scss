@@ -1,7 +1,7 @@
 // Use flex to keep the footer at the bottom.
 body,
 .apos-refreshable,
-.bp-wrapper {
+.fg-wrapper {
   display: flex;
   flex-direction: column;
 }
@@ -15,21 +15,21 @@ body {
 }
 
 .apos-refreshable,
-.bp-wrapper,
+.fg-wrapper,
 main {
   flex-grow: 1;
 }
 
-.bp-header,
+.fg-header,
 main,
-.bp-footer {
+.fg-footer {
   width: 100%;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.bp-header {
+.fg-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,11 +38,11 @@ main,
   padding: 40px 0;
 }
 
-.bp-footer {
+.fg-footer {
   padding: 40px 0;
 }
 
-.bp-footer__links {
+.fg-footer__links {
   padding-left: 0px;
   list-style: none;
   text-align: center;
@@ -54,20 +54,20 @@ main,
   li:last-child { margin-right: 0; }
 }
 
-.bp-header__logo {
+.fg-header__logo {
   display: block;
   height: 100px;
   object-fit: contain;
 }
 
-.bp-header__login {
+.fg-header__login {
 
   &:visited {
     color: white;
   }
 }
 
-.bp-content {
+.fg-content {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;

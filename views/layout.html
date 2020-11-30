@@ -22,22 +22,22 @@
 {% endblock %}
 
 {% block beforeMain %}
-<div class="bp-wrapper">
-  <header class="bp-header">
+<div class="fg-wrapper">
+  <header class="fg-header">
     <a href="/">
-      <img class="bp-header__logo" src="/images/fake-goods.png" alt="Fake Goods logo">
+      <img class="fg-header__logo" src="/images/fake-goods.png" alt="Fake Goods logo">
     </a>
-    <nav class="bp-nav">
+    <nav class="fg-nav">
       <a href="/shop">Shop</a>
     </nav>
     <div>
-      <button class="snipcart-checkout">
+      <button class="snipcart-checkout fg-button">
         Check out (<span class="snipcart-total-price"></span>)
       </button>
 
     </div>
   </header>
-  <main class="bp-main">
+  <main class="fg-main">
 {% endblock %}
 
 {% block main %}
@@ -50,10 +50,10 @@
 
 {% block afterMain %}
   </main>
-  <footer class="bp-footer">
+  <footer class="fg-footer">
     <p>© Nobody, this is fake</p>
   </footer>
-</div>{# Close .bp-wrapper #}
+</div>{# Close .fg-wrapper #}
 {% endblock %}
 
 {% block extraBody %}
