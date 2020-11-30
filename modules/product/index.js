@@ -1,3 +1,4 @@
+const cuid = require('cuid');
 module.exports = {
   extend: '@apostrophecms/piece-type',
   fields: {
@@ -25,8 +26,7 @@ module.exports = {
       sku: {
         label: 'SKU ID',
         help: 'Unique ID for identifying products',
-        type: 'string',
-        required: true // TODO: Populate this in event handler
+        type: 'string'
       }
     },
     group: {
@@ -42,5 +42,17 @@ module.exports = {
         ]
       }
     }
+  },
+
+  handlers(self, options) {
+    return {
+      beforeSave: {
+        async setSku(req, piece) {
+          if (!piece.sku) {
+            piece.sku = cuid();
+          }
+        }
+      }
+    };
   }
 };
