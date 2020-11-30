@@ -27,38 +27,6 @@ module.exports = {
         type: 'string',
         required: true // TODO: Populate this in event handler
       }
-      // main: {
-      //   label: 'Content',
-      //   type: 'area',
-      //   options: {
-      //     widgets: {
-      //       '@apostrophecms/image': {},
-      //       '@apostrophecms/video': {},
-      //       '@apostrophecms/rich-text': {
-      //         toolbar: [
-      //           'styles',
-      //           'bold',
-      //           'italic',
-      //           'strike',
-      //           'link',
-      //           'bullet_list',
-      //           'ordered_list',
-      //           'blockquote'
-      //         ],
-      //         styles: [
-      //           {
-      //             tag: 'p',
-      //             label: 'Paragraph (P)'
-      //           },
-      //           {
-      //             tag: 'h3',
-      //             label: 'Heading 3 (H3)'
-      //           }
-      //         ]
-      //       }
-      //     }
-      //   }
-      // }
     },
     group: {
       basics: {
@@ -72,12 +40,6 @@ module.exports = {
           'visibility'
         ]
       }
-      // main: {
-      //   label: 'Content',
-      //   fields: [
-      //     'main'
-      //   ]
-      // }
     }
   }
 };

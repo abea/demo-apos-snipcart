@@ -9,12 +9,17 @@ module.exports = {
         label: 'Default'
       },
       {
-        name: 'product-page',
-        label: 'Product Listing'
-      },
-      {
         name: '@apostrophecms/home-page',
         label: 'Home'
+      }
+    ],
+    park: [
+      {
+        type: 'product-page',
+        title: 'Shop',
+        slug: '/shop',
+        published: true,
+        parkedId: 'shopPage'
       }
     ]
   }
