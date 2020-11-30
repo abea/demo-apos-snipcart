@@ -45,8 +45,10 @@ require('apostrophe')({
 
     // A home for our own project-specific javascript and SASS assets
     asset: {},
-    'default-page': {}
 
     // ADD PRODUCT MODULES BELOW ⤵️
+
+    // A custom page type, just for the fun of it.
+    'default-page': {}
   }
 });
