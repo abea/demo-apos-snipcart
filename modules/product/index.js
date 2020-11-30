@@ -9,7 +9,8 @@ module.exports = {
         max: 250
       },
       price: {
-        type: 'float'
+        type: 'float',
+        required: true
       },
       photo: {
         label: 'Photo',
