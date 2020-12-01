@@ -27,6 +27,7 @@
     "watch": [
       "./app.js",
       "./modules/**/*",
+      "./views/**/*.html",
       "./src/**/*",
       "./node_modules/apostrophe/modules/@apostrophecms/**/*"
     ],
