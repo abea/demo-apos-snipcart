@@ -7,8 +7,10 @@
       <h1>{{ data.page.title }}</h1>
     </header>
     <div class="fg-products">
+      <!-- Loop over each product -->
       {% for product in data.pieces %}
         <div class="fg-products__item">
+          <!-- Get the image to display -->
           {% set image = apos.image.first(product.photo) %}
           {% set imgUrl = apos.attachment.url(image, { size: 'one-third' }) %}
           {% if imgUrl %}
