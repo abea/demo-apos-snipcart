@@ -1,22 +1,21 @@
 {
   "name": "fake-goods",
-  "version": "3.0.0-alpha.1",
-  "description": "Apostrophe 3 Boilerplate Site",
+  "version": "1.0.0",
+  "description": "Fake Goods Demo Site",
   "main": "app.js",
   "scripts": {
     "start": "node app",
     "build": "webpack && node app @apostrophecms/asset:build",
-    "dev": "nodemon --delay 1000ms -x \"npm run build && nodemon app.js\"",
-    "storybook": "node app @apostrophecms/storybook:run"
+    "dev": "nodemon --delay 1000ms -x \"npm run build && nodemon app.js\""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/apostrophecms/a3-boilerplate"
+    "url": "https://github.com/abea/demo-apos-snipcart"
   },
   "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "dependencies": {
-    "apostrophe": "3.0.0-alpha.1",
+    "apostrophe": "alpha",
     "cuid": "^2.1.8",
     "normalize.css": "^8.0.1",
     "webpack": "^4.44.2",
