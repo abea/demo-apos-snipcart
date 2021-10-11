@@ -15,11 +15,9 @@
   "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "dependencies": {
-    "apostrophe": "alpha",
+    "apostrophe": "^3.5.0",
     "cuid": "^2.1.8",
-    "normalize.css": "^8.0.1",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "normalize.css": "^8.0.1"
   },
   "nodemonConfig": {
     "verbose": true,
@@ -58,6 +56,9 @@
     "nodemon": "^2.0.4",
     "sass": "^1.26.11",
     "sass-loader": "^10.0.5",
-    "style-loader": "^1.2.1"
+    "style-loader": "^1.2.1",
+    "vue-loader": "^16.8.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   }
 }
